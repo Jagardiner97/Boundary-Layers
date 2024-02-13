@@ -1,0 +1,37 @@
+### 'title of data set'
+s200_5.dat, turb ml, flat plate, Ts(x)
+###       kgeom       neq    kstart      mode      ktmu     ktmtr      ktme
+              1         2         3         2         5         0         3
+###       kbfor   jsor(1)   jsor(2)   jsor(3)   jsor(4)   jsor(5)
+              1         1
+###      kfluid    kunits
+              1         1
+###          po      rhoc    viscoc    amolwt    gam/cp
+       101325.0   1.17700 1.838E-05     00.00   1005.00
+###      prc(1)    prc(2)    prc(3)    prc(4)    prc(5)
+          0.707
+###     nxbc(I)  jbc(I,1)  jbc(I,2)  jbc(I,3)  jbc(I,4)  jbc(I,5)
+              2         1
+###     nxbc(E)  jbc(E,1)  jbc(E,2)  jbc(E,3)  jbc(E,4)  jbc(E,5)
+              2         1
+###        x(m)     rw(m)   aux1(m)   aux2(m)   aux3(m)
+      0.0000000    1.0000    0.0000    0.0000    0.0000
+      3.0000000    1.0000    0.0000    0.0000    0.0000
+###      ubI(m)   am(I,m) fj(I,1,m) fj(I,2,m) fj(I,3,m) fj(I,4,m) fj(I,5,m)
+###      ubE(m)   am(E,m) fj(E,1,m) fj(E,2,m) fj(E,3,m) fj(E,4,m) fj(E,5,m)
+           0.00     0.000     295.0
+          15.00       0.0       0.0
+           0.00     0.000     295.0
+          15.00       0.0       0.0
+###      xstart      xend    deltax       fra     enfra
+      0.2000000  3.000000     0.050     0.010 1.000E-06
+###        kout    kspace       kdx      kent
+              8       250         0         1
+###          k1        k2        k3        k4        k5        k6
+              1         0         0         0        50         0
+###          k7        k8        k9       k10       k11       k12
+              0         0         0         0         0         0
+###         axx       bxx       cxx       dxx       exx       fxx       gxx
+      0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.900E+00 -0.01E+00
+###         dyi      rate     tstag      vapp     tuapp    epsapp
+      1.000E-01    0.0900     300.0      0.00       0.0      0.00
