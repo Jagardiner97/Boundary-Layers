@@ -30,6 +30,7 @@ print(f"xend: {x_end}")
 filepath = "12-17/out.txt"
 data = pd.read_csv(filepath, delim_whitespace=True, skiprows=26)
 rex = data["rex"].values
+rem = data["rem"].values
 st_tst = data["st"].values
 
 # Stanton Number Calculations
@@ -37,6 +38,7 @@ st18 = []
 st19 = []
 for re in rex:
     st18.append(0.0287 * (re ** (-0.2)) * Pr ** (-0.4))
+for re in rem:
     st19.append(0.0125 * (re ** (-0.25)) * Pr ** (-0.5))
 
 # Plots
