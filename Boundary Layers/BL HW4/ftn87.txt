@@ -1,0 +1,4 @@
+   s200_5.dat, turb ml, flat plate, Ts(x)                                  
+   scaling factor for x/s, s=  1.0000E+00
+   constant props, csubp =  1005.00 htc based on (ts-tinf)
+        intg  x/s            htc         uinf        st

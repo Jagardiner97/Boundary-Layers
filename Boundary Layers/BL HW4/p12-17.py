@@ -32,20 +32,30 @@ data = pd.read_csv(filepath, delim_whitespace=True, skiprows=26)
 rex = data["rex"].values
 rem = data["rem"].values
 st_tst = data["st"].values
+thermal = pd.read_csv("12-17/ftn86.txt", delim_whitespace=True, skiprows=3)
+xthermal = thermal["x/s"].values
+qflux = thermal["qflux"].values
 
 # Stanton Number Calculations
 st18 = []
 st19 = []
+st24 = []
+x = []
 for re in rex:
     st18.append(0.0287 * (re ** (-0.2)) * Pr ** (-0.4))
+    x.append(re * mu / (rho * V_fs))
 for re in rem:
     st19.append(0.0125 * (re ** (-0.25)) * Pr ** (-0.5))
+denom24 = rho * V_fs * cp * (T_surface - T_fs)
+for q in qflux:
+    st24.append(q/denom24)
 
-# Plots
-plt.plot(rex, st_tst, label="TEXSTAN")
-plt.plot(rex, st18, label="Eq. 12-18")
-plt.plot(rex, st19, label="Eq. 12-19")
-plt.xlabel("Re_x")
+# Stanton Number Plots
+plt.plot(x, st_tst, label="TEXSTAN")
+plt.plot(x, st18, label="Eq. 12-18")
+plt.plot(x, st19, label="Eq. 12-19")
+plt.plot(xthermal, st24, label="Eq. 5-24")
+plt.xlabel("x")
 plt.ylabel("St")
 plt.legend()
 plt.show()
