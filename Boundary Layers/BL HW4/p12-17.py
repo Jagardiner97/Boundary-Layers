@@ -57,6 +57,7 @@ plt.plot(x, st19, label="Eq. 12-19")
 plt.plot(xthermal, st24, label="Eq. 5-24")
 plt.xlabel("x")
 plt.ylabel("St")
+plt.title("Stanton Number Comparisons")
 plt.legend()
 plt.show()
 

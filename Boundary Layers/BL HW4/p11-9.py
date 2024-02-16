@@ -61,7 +61,7 @@ print("kappa =", 0.41)
 print("y_offset =", y_offset*1000, "mm")
 print("k_s = ", k_s*1000, "mm")
 print("Re_k =", Re_k)
-print("The flow is", roughness_regime(Re_k))
+print("The roughness regime is", roughness_regime(Re_k))
 
 fit = fit_values(y_m, k_s, y_offset)
 plt.scatter(y_plus, u_plus, label="data")

@@ -1,3 +1,0 @@
-  rex =   2.017165E+05  and bxx =   3.000000E+00
-    
-   ### pgm stopped in sub opro

@@ -7,16 +7,16 @@ s200_5.dat, turb ml, flat plate, Ts(x)
 ###      kfluid    kunits
               1         1
 ###          po      rhoc    viscoc    amolwt    gam/cp
-       101325.0   1.17700 1.838E-05     00.00   1005.00
+       101325.0   784.500 3.160E-04     00.00   2140.00
 ###      prc(1)    prc(2)    prc(3)    prc(4)    prc(5)
-          0.707
+          2.190
 ###     nxbc(I)  jbc(I,1)  jbc(I,2)  jbc(I,3)  jbc(I,4)  jbc(I,5)
               2         1
 ###     nxbc(E)  jbc(E,1)  jbc(E,2)  jbc(E,3)  jbc(E,4)  jbc(E,5)
               2         1
 ###        x(m)     rw(m)   aux1(m)   aux2(m)   aux3(m)
       0.0000000    1.0000    0.0000    0.0000    0.0000
-      3.0000000    1.0000    0.0000    0.0000    0.0000
+      0.0778750    1.0000    0.0000    0.0000    0.0000
 ###      ubI(m)   am(I,m) fj(I,1,m) fj(I,2,m) fj(I,3,m) fj(I,4,m) fj(I,5,m)
 ###      ubE(m)   am(E,m) fj(E,1,m) fj(E,2,m) fj(E,3,m) fj(E,4,m) fj(E,5,m)
            0.00     0.000     295.0
@@ -24,7 +24,7 @@ s200_5.dat, turb ml, flat plate, Ts(x)
            0.00     0.000     295.0
           15.00       0.0       0.0
 ###      xstart      xend    deltax       fra     enfra
-      0.2000000  3.000000     0.050     0.010 1.000E-06
+      0.0053707  0.077875     0.005     0.010 1.000E-06
 ###        kout    kspace       kdx      kent
               8       250         0         1
 ###          k1        k2        k3        k4        k5        k6
