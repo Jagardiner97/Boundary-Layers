@@ -30,8 +30,8 @@ s200_5.dat, turb ml, flat plate, Ts(x)
 ###          k1        k2        k3        k4        k5        k6
               1         0         0         0        50         0
 ###          k7        k8        k9       k10       k11       k12
-              0         0         0        21         0         0
+              0        35         0        21         0         0
 ###         axx       bxx       cxx       dxx       exx       fxx       gxx
-      0.000E+00 3.000E+00 0.000E+00 0.000E+00 0.000E+00 0.900E+00 -0.01E+00
+      0.000E+00 2.000E+05 0.000E+00 0.000E+00 0.000E+00 0.900E+00 -0.01E+00
 ###         dyi      rate     tstag      vapp     tuapp    epsapp
       1.000E-01    0.0900     300.0      0.00       0.0      0.00

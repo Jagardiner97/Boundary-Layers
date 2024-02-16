@@ -61,3 +61,24 @@ plt.title("Stanton Number Comparisons")
 plt.legend()
 plt.show()
 
+# Temperature Plots
+cf2 = 2.496e-3
+u_tau = np.sqrt((15**2) * cf2)
+qf = qflux[0]
+denom = qf / (rho * cp)
+profiles = pd.read_csv("ftn74.txt", delim_whitespace=True, skiprows=2)
+y_vals = profiles["y(i)"].values
+T_vals = profiles["f(1,i)"].values
+y_plus = []
+T_plus = []
+for y in y_vals:
+    y_plus.append(y * u_tau * rho / mu)
+for T_bar in T_vals:
+    T_plus.append((T_surface - T_bar) * np.sqrt(u_tau) / denom)
+plt.plot(y_plus, T_plus)
+plt.xlabel("y+")
+plt.ylabel("T+")
+plt.xscale("log")
+plt.title("Thermal Law of the Wall for Air")
+plt.show()
+

@@ -1,0 +1,35 @@
+  ====================================================
+  TEXSTAN(academic)
+  s200_5.dat, turb ml, flat plate, Ts(x)                                  
+  stepsize: constant, dx=  .050
+  entrainment based only on mom + energy eqns;   enfra= 1.00E-06  fra=  .010
+  dpdx: not-a-knot spline curve fit
+  energy eqn: solved, no source terms
+  properties: constant
+     po= 1.01325E+05  den= 1.17700E+00  vis= 1.83800E-05  sp_ht= 1.00500E+03
+     prc(je)=     .707
+  initial profiles: kstart=  3  dyi= 1.000E-01  rate=  .0900
+  turbulence model information:
+     m-l: k=0.41, al=fn(0.085,rem), a+=fn(25,p+,vo+)
+     transition model: not used
+     vapp=    .00  tuapp=   .0  epsapp= 0.000E+00
+     turbulent prandtl number model: Kays variable prt
+     y-grid being controlled to limit yplus(2) <=   .20
+  axx= 0.0000E+00  bxx= 2.0000E+05  cxx= 0.0000E+00  dxx= 0.0000E+00
+  exx= 0.0000E+00  fxx= 9.0000E-01  gxx=-1.0000E-02
+  Stanton number and htc based on (ts-tinf)
+  ====================================================
+
+  intg x         rem       cf2       h12       reh        st
+     5 2.003E-01 6.963E+02 2.496E-03 1.469E+00 5.877E+02  3.149E-03
+   250 2.766E-01 8.744E+02 2.345E-03 1.454E+00 8.100E+02  2.891E-03
+   500 3.860E-01 1.112E+03 2.181E-03 1.437E+00 1.099E+03  2.636E-03
+   750 5.223E-01 1.388E+03 2.054E-03 1.422E+00 1.431E+03  2.450E-03
+  1000 6.905E-01 1.711E+03 1.946E-03 1.408E+00 1.814E+03  2.301E-03
+  1250 8.961E-01 2.086E+03 1.852E-03 1.397E+00 2.256E+03  2.175E-03
+  1500 1.145E+00 2.518E+03 1.769E-03 1.387E+00 2.762E+03  2.067E-03
+  1750 1.444E+00 3.015E+03 1.694E-03 1.380E+00 3.341E+03  1.972E-03
+  2000 1.799E+00 3.581E+03 1.626E-03 1.373E+00 4.000E+03  1.888E-03
+  2250 2.219E+00 4.224E+03 1.565E-03 1.367E+00 4.746E+03  1.813E-03
+  2500 2.712E+00 4.951E+03 1.508E-03 1.363E+00 5.587E+03  1.744E-03
+  2630 3.000E+00 5.365E+03 1.480E-03 1.361E+00 6.065E+03  1.711E-03
