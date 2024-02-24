@@ -1,0 +1,46 @@
+### 'title of data set'
+s10.dat, lam, Blasius, Ts(x)
+###       kgeom       neq    kstart      mode      ktmu     ktmtr      ktme
+              1         2         4         1         0         0         0
+###       kbfor   jsor(1)   jsor(2)   jsor(3)   jsor(4)   jsor(5)
+              1         1
+###      kfluid    kunits
+              1         1
+###          po      rhoc    viscoc    amolwt    gam/cp
+       101325.0    995.71  7.97E-04     00.00   4180.00
+###      prc(1)    prc(2)    prc(3)    prc(4)    prc(5)
+            5.0
+###     nxbc(I)  jbc(I,1)  jbc(I,2)  jbc(I,3)  jbc(I,4)  jbc(I,5)
+              5         1
+###     nxbc(E)  jbc(E,1)  jbc(E,2)  jbc(E,3)  jbc(E,4)  jbc(E,5)
+              5         1
+###        x(m)     rw(m)   aux1(m)   aux2(m)   aux3(m)
+      0.0000000    1.0000    0.0000    0.0000    0.0000
+      0.0500000    1.0000    0.0000    0.0000    0.0000
+      0.1000000    1.0000    0.0000    0.0000    0.0000
+      0.1500000    1.0000    0.0000    0.0000    0.0000
+      0.2000000    1.0000    0.0000    0.0000    0.0000
+###      ubI(m)   am(I,m) fj(I,1,m) fj(I,2,m) fj(I,3,m) fj(I,4,m) fj(I,5,m)
+###      ubE(m)   am(E,m) fj(E,1,m) fj(E,2,m) fj(E,3,m) fj(E,4,m) fj(E,5,m)
+           0.00     0.000     295.0
+          15.00       0.0       0.0
+           0.00     0.000     295.0
+          15.00       0.0       0.0
+           0.00     0.000     295.0
+          15.00       0.0       0.0
+           0.00     0.000     295.0
+          15.00       0.0       0.0
+           0.00     0.000     295.0
+          15.00       0.0       0.0
+###      xstart      xend    deltax       fra     enfra
+      0.0010410  0.200000     0.100     0.010 1.000E-06
+###        kout    kspace       kdx      kent
+              2       100         0         1
+###          k1        k2        k3        k4        k5        k6
+              0         0         0         0        50         0
+###          k7        k8        k9       k10       k11       k12
+              0        00         0        10         0         0
+###         axx       bxx       cxx       dxx       exx       fxx       gxx
+      0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+###         dyi      rate     tstag      vapp     tuapp    epsapp
+      5.000E-05    0.0900     300.0      0.00       0.0      0.00

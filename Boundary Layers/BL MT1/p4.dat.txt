@@ -39,7 +39,7 @@ s31.dat, lam, pipe, CEF, q"s(x)
 ###          k1        k2        k3        k4        k5        k6
               0         0         0         0        20         0
 ###          k7        k8        k9       k10       k11       k12
-              0         0         0         0         0         0
+              0         0         0        11         0         0
 ###         axx       bxx       cxx       dxx       exx       fxx       gxx
       0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
 ###         dyi      rate      reyn      tref     tuapp    epsapp     twall
