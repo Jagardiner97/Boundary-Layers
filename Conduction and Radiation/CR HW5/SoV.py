@@ -21,23 +21,32 @@ def theta_to_T(theta):
 def theta(x, y, n_terms):
     G = 2 * h_bar / (k * th) * (T_h - T_inf)
     theta_sum = 0
-    for i in range(n_terms):
+    for i in range(1, n_terms+1):
         i_odd = i * 2 - 1
         lambda_i = np.pi * i_odd / (2 * a)
-        C_i = 4 / (np.pi * i_odd * np.cosh(np.sqrt(lambda_i**2 + G) * b))
-        theta_sum += C_i * np.cos(lambda_i * x) * np.cosh(np.sqrt(lambda_i**2 + G) * y)
-    return theta_sum
+        C_i = (-1**(1+i))*4 / (np.pi * i_odd * np.cosh(np.sqrt(lambda_i**2 + G) * b))
+        cos_term = np.cos(lambda_i * x)
+        cosh_term = np.cosh(np.sqrt(lambda_i**2 + G) * y)
+        theta_val = C_i * cos_term * cosh_term
+        theta_sum += theta_val
+    Temp = theta_to_T(theta_sum)
+    return Temp
 
-def plot_contour(x_resolution=20, y_resolution=15, num_terms=30):
+def plot_contour(x_resolution=20, y_resolution=15, num_terms=100):
     # Make the grid and calculate theta
     x = np.linspace(0, a, x_resolution)
     y = np.linspace(0, b, y_resolution)
     X, Y = np.meshgrid(x, y)
     Z = theta(X, Y, num_terms)
+    z = []
+    for x_point in x:
+        z_row = []
+        for y_point in y:
+            z_row.append(theta(x_point, y_point, num_terms))
 
     # Plot the contours
     plt.figure(figsize=(8, 6))
-    plt.contourf(X, Y, Z, cmap='viridis')
+    plt.contourf(X, Y, Z, cmap='YlOrRd')
     plt.colorbar(label="Theta")
     plt.xlabel("x")
     plt.ylabel("y")
@@ -48,4 +57,4 @@ def plot_contour(x_resolution=20, y_resolution=15, num_terms=30):
 # Calculate grid and make contour plot
 plot_contour()
 
-print(theta(a/2, b, 100))
+print(theta(a, b/2, 100))
