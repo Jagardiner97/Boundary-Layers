@@ -27,9 +27,11 @@ def make_list(x_values):
 
 def calculate_theta(x_vals, time, num_terms):
     temps = make_list(x_vals)
+    lambdas = []
+    cs = []
     for i in range(num_terms):
         if i == 0:
-            lb = 0.01
+            lb = 0
             ub = math.pi / 2
         else:
             lb = (1 + 2 * (i - 1)) * math.pi / 2
@@ -41,7 +43,7 @@ def calculate_theta(x_vals, time, num_terms):
             lhs = math.tan(lambdaL)
             rhs = Bi / lambdaL
             diff = rhs - lhs
-            if abs(diff) / lhs < 0.01 * lhs:
+            if abs(diff) < 0.00001:
                 converged = True
                 lambda_i = lambdaL / L
             elif diff > 0:
@@ -49,14 +51,18 @@ def calculate_theta(x_vals, time, num_terms):
             else:
                 ub = lambdaL
             i_count += 1
-        c_num = q_flux / k * (lambdaL * math.sin(lambdaL) + math.cos(lambdaL) - 1)/(lambda_i**2) - 20 * math.sin(lambdaL) / lambda_i
-        C = c_num  / ((lambdaL + math.cos(lambdaL)*math.sin(lambdaL))/(2 * lambda_i))
+        lambdas.append(lambda_i)
+        c_num = q_flux / k * (lambdaL * math.sin(lambdaL) + math.cos(lambdaL) - 1)/(lambda_i**2) - C2 * math.sin(lambdaL) / lambda_i
+        C = c_num / ((lambdaL + math.cos(lambdaL)*math.sin(lambdaL))/(2 * lambda_i))
+        cs.append(C)
         for i, x_pos in enumerate(x_vals):
             theta_psi = C * math.cos(lambda_i * x_pos) * math.exp(-(lambda_i**2) * alpha * time)
             temps[i] += theta_psi
     for i, x_pos in enumerate(x_vals):
         theta_phi = C2 - q_flux / k * x_pos + T_inf
         temps[i] += theta_phi
+    print(lambdas)
+    print(cs)
     return temps
 
 
@@ -64,6 +70,7 @@ x = np.linspace(0, L, 50)
 for t in plot_times:
     temperatures = calculate_theta(x, t, 30)
     plt.plot(x, temperatures, label=f"t = {t}")
+
 plt.xlabel("x (m)")
 plt.ylabel("Temperature (C)")
 plt.legend()
