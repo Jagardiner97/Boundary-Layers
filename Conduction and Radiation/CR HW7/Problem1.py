@@ -15,7 +15,7 @@ c = 700
 alpha = k / (rho * c)
 Bi = h * L / k
 C2 = q_flux * (1 / h + L / k)
-plot_times = [0, 100, 200, 500, 1000, 5000, 10_000, 1000000]
+plot_times = [0, 100, 200, 500, 1000, 5000, 10_000]
 
 
 def make_list(x_values):
