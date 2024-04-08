@@ -1,8 +1,10 @@
+# Import Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import time
 
+# Read and reorganize the data
 start = time.time()
 x = []
 y = []
@@ -45,3 +47,29 @@ for i in range(1, 1000+1):
 print(f"Done in {time.time()-start:.2f} s")
 print(f"x: {len(x)}")
 print(f"y: {len(y)}")
+
+# Functions for wall coordinate variables
+def tau_s(cf, u_inf, rho):
+    return cf * u_inf**2 * rho / 2
+
+def u_tau(cf, u_inf):
+    return np.sqrt(cf / 2) * u_inf
+
+def u_plus(u_bar, utau):
+    return u_bar / utau
+
+def y_plus(y, utau, nu):
+    return y * utau / nu
+
+def vs_plus(vs, utau):
+    return vs / utau
+
+def tau_plus(tau, taus):
+    return tau / taus
+
+def p_plus(mu, dpdx, rho, taus):
+    return mu * dpdx / (rho**(1/2) * taus**(3/2))
+
+# Calculate the location of the wall
+
+
