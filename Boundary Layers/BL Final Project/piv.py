@@ -35,15 +35,19 @@ for i in range(1, 1000+1):
     vy = data.iloc[:, 3].values
     v_row = []
     u_row = []
+    v_grid = []
+    u_grid = []
     for j in range(len(vx)):
         x_index = len(u_row)
         if x_index % len(x) == 0 and x_index != 0:
-            v.append(v_row)
-            u.append(u_row)
+            v_grid.append(v_row)
+            u_grid.append(u_row)
             v_row = []
             u_row = []
         v_row.append(vx[i])
         u_row.append(vy[i])
+    v.append(v_grid)
+    u.append(u_grid)
 print(f"Done in {time.time()-start:.2f} s")
 print(f"x: {len(x)}")
 print(f"y: {len(y)}")
