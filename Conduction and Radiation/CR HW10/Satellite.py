@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Surface Properties
-h_orbit = 3.5e5
 d_sat = 1
 d_earth = 1.29e7
 T_earth = 300
